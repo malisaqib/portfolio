@@ -110,10 +110,10 @@ export const projects: Project[] = [
     ],
   },
   {
-    category: "Security / Web App",
+    category: "Hackathon / Security",
     title: "Cipher Stack",
     description:
-      "Interactive cipher pipeline builder for chaining text transformations, running encrypt/decrypt flows, and previewing each step. Supports ciphers like Caesar, XOR, Vigenere, Rail Fence, Columnar, Base64, and Reverse.",
+      "Hackathon task built as an interactive cipher pipeline builder for chaining text transformations, running encrypt/decrypt flows, and previewing each step. Supports ciphers like Caesar, XOR, Vigenere, Rail Fence, Columnar, Base64, and Reverse.",
     tech: ["React", "Vite", "JavaScript", "Motion", "Drag and Drop", "Ciphers"],
     links: [
       { label: "Live", href: "https://cipher-stack-two.vercel.app" },
