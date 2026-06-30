@@ -20,11 +20,11 @@ export type SkillGroup = {
 
 export const profile = {
   name: "Muhammad Ali Saqib",
-  tagline: "Backend & AI Systems Builder",
+  tagline: "Backend & AI Systems",
   location: "CS undergraduate at NUST",
   email: "muhammadalisaqib2006@gmail.com",
   hero:
-    "I'm a CS undergraduate at NUST building backend-heavy AI products, RAG pipelines, APIs, and production-ready software. I like working on systems that connect databases, LLMs, and real user workflows.",
+    "I build backend-heavy AI products, RAG pipelines, APIs, and database-backed software. I like working close to the systems layer: retrieval, data modeling, auth, structured LLM output, and the product workflows around them.",
   github: "https://github.com/malisaqib",
   linkedin: "https://linkedin.com/in/m-ali-saqib",
 };
@@ -44,10 +44,10 @@ export const heroActions: LinkItem[] = [
 ];
 
 export const focusAreas = [
-  "RAG pipelines",
-  "APIs and server-side logic",
-  "PostgreSQL and vector search",
-  "Production AI product workflows",
+  "Backend APIs",
+  "RAG and vector search",
+  "PostgreSQL systems",
+  "Production AI workflows",
 ];
 
 export const projects: Project[] = [
@@ -65,12 +65,12 @@ export const projects: Project[] = [
       "pgvector",
     ],
     description:
-      "A mobile-first AI fitness PWA that helps users generate personalized diet and workout plans, log meals in natural language, and track calorie/protein progress. Built for South Asian users with support for desi foods and Roman Urdu food input.",
+      "A mobile-first AI fitness PWA for personalized diet plans, workout plans, natural-language meal logging, and calorie/protein tracking. The system is built around South Asian foods, desi portions, and Roman Urdu food input.",
     highlights: [
-      "Built a hybrid RAG pipeline using Gemini embeddings, pgvector, Postgres trigram search, and alias expansion.",
-      "Parsed meals like \"2 roti, daal\" into structured nutrition JSON using Groq/Llama.",
+      "Built a hybrid retrieval pipeline with Gemini embeddings, pgvector, Postgres trigram search, and alias expansion.",
+      "Converted meal text like \"2 roti, daal\" into structured nutrition JSON using Groq/Llama.",
       "Unified a 7,900-item food database with per-100g nutrition normalization.",
-      "Added deterministic grounding to reduce AI hallucinations.",
+      "Added deterministic grounding checks to reduce unsupported AI nutrition outputs.",
       "Secured user data using Supabase Auth and Row Level Security.",
     ],
     links: [
@@ -91,12 +91,12 @@ export const projects: Project[] = [
       "Streamlit",
     ],
     description:
-      "A multi-role emergency-response platform for disaster resource coordination and decision support.",
+      "A multi-role emergency-response platform for disaster resource coordination, situational context, and decision support.",
     highlights: [
-      "Built FastAPI backend with PostgreSQL schema, migrations, ENUM types, triggers, stored procedures, and analytical views.",
-      "Implemented RAG pipeline using ChromaDB and Sentence Transformers.",
-      "Used Groq Llama 3.3 70B for context-aware emergency decision support.",
-      "Added geospatial dashboards using Pandas and Folium.",
+      "Built a FastAPI backend with PostgreSQL schemas, migrations, ENUM types, triggers, stored procedures, and analytical views.",
+      "Implemented a RAG pipeline with ChromaDB and Sentence Transformers.",
+      "Used Groq Llama 3.3 70B for context-aware emergency support responses.",
+      "Added geospatial dashboards with Pandas and Folium.",
     ],
     links: [{ label: "GitHub", href: "https://github.com/malisaqib" }],
   },
@@ -106,11 +106,11 @@ export const projects: Project[] = [
     category: "Client Work / Web App / AI Chatbot",
     stack: ["React", "Next.js"],
     description:
-      "A responsive production website for a real client with an AI chatbot for customer and product queries.",
+      "A responsive production website for a real client, with an AI chatbot for customer and product queries.",
     highlights: [
-      "Built component-based frontend and optimized routing.",
+      "Built a component-based web app with clean routing.",
       "Deployed a custom AI chatbot for product/customer questions.",
-      "Delivered a real-world client project from requirements to deployment.",
+      "Delivered the project from requirements through deployment.",
     ],
     links: [{ label: "GitHub", href: "https://github.com/malisaqib" }],
   },
@@ -119,7 +119,7 @@ export const projects: Project[] = [
 export const skillGroups: SkillGroup[] = [
   {
     title: "Backend & APIs",
-    skills: ["FastAPI", "REST APIs", "Node.js basics", "server-side logic"],
+    skills: ["FastAPI", "REST APIs", "server-side logic", "Node.js basics"],
   },
   {
     title: "AI / LLM Systems",
@@ -180,3 +180,6 @@ export const education = {
   degree: "BS Computer Science",
   dates: "Sep 2025 - Expected 2029",
 };
+
+export const siteDescription =
+  "CS student at NUST building backend-heavy AI products, RAG pipelines, APIs, and production software.";

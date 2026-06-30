@@ -2,20 +2,20 @@ import { education, experience } from "@/lib/data";
 
 export function Experience() {
   return (
-    <section className="px-4 py-20 sm:px-6 lg:px-8">
+    <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <p className="text-sm font-medium text-emerald-300">
               Experience & education
             </p>
-            <h2 className="mt-3 break-words text-3xl font-semibold text-white sm:text-4xl">
-              Learning through internships, coursework, and shipped projects.
+            <h2 className="mt-3 break-words text-3xl font-semibold leading-tight text-white sm:text-4xl">
+              Learning through internships, coursework, and practical builds.
             </h2>
           </div>
 
           <div className="grid gap-4">
-            <article className="rounded-lg border border-white/10 bg-white/[0.035] p-5 sm:p-6">
+            <article className="rounded-lg border border-zinc-800 bg-zinc-950/60 p-5 sm:p-6">
               <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <h3 className="text-xl font-semibold text-white">
@@ -37,7 +37,7 @@ export function Experience() {
               </ul>
             </article>
 
-            <article className="rounded-lg border border-white/10 bg-white/[0.035] p-5 sm:p-6">
+            <article className="rounded-lg border border-zinc-800 bg-zinc-950/60 p-5 sm:p-6">
               <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <h3 className="text-xl font-semibold text-white">

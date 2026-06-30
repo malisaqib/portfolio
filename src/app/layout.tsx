@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { profile, siteDescription } from "@/lib/data";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,16 +14,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Ali Saqib | Backend & AI Systems Builder",
-  description:
-    "Portfolio of Muhammad Ali Saqib, a CS undergraduate at NUST building backend-heavy AI products, RAG pipelines, APIs, and database-backed software.",
-  authors: [{ name: "Muhammad Ali Saqib" }],
-  creator: "Muhammad Ali Saqib",
+  title: "Muhammad Ali Saqib — Backend & AI Systems",
+  description: siteDescription,
+  authors: [{ name: profile.name }],
+  creator: profile.name,
+  keywords: [
+    "Muhammad Ali Saqib",
+    "Backend Development",
+    "AI Engineering",
+    "RAG pipelines",
+    "FastAPI",
+    "PostgreSQL",
+    "Supabase",
+  ],
   openGraph: {
-    title: "Muhammad Ali Saqib | Backend & AI Systems Builder",
-    description:
-      "Backend and AI engineering portfolio focused on RAG pipelines, APIs, databases, and production AI products.",
+    title: "Muhammad Ali Saqib — Backend & AI Systems",
+    description: siteDescription,
     type: "website",
+    siteName: "Muhammad Ali Saqib",
+  },
+  twitter: {
+    card: "summary",
+    title: "Muhammad Ali Saqib — Backend & AI Systems",
+    description: siteDescription,
   },
 };
 

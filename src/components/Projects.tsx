@@ -3,16 +3,16 @@ import { ProjectCard } from "@/components/ProjectCard";
 
 export function Projects() {
   return (
-    <section id="work" className="scroll-mt-24 px-4 py-20 sm:px-6 lg:px-8">
+    <section id="work" className="scroll-mt-24 px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
           <p className="text-sm font-medium text-emerald-300">Featured work</p>
-          <h2 className="mt-3 break-words text-3xl font-semibold text-white sm:text-4xl">
+          <h2 className="mt-3 break-words text-3xl font-semibold leading-tight text-white sm:text-4xl">
             Backend-heavy AI projects and shipped software.
           </h2>
           <p className="mt-4 text-base leading-7 text-zinc-400">
-            The projects below focus on data modeling, API design, AI grounding,
-            RAG retrieval, and the real product workflows around them.
+            These projects focus on retrieval, data modeling, API design, AI
+            grounding, and the product flows needed to make them useful.
           </p>
         </div>
 
