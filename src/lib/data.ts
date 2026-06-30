@@ -60,6 +60,8 @@ export const projectFilters = [
   "Backend",
   "RAG",
   "Web App",
+  "SaaS",
+  "Security",
   "Client Work",
 ];
 
@@ -80,7 +82,17 @@ export const projects: Project[] = [
     ],
     links: [
       { label: "Live", href: "https://www.zorfit.app" },
-      { label: "GitHub", href: "https://github.com/malisaqib" },
+      { label: "GitHub", href: "https://github.com/malisaqib/gym-app" },
+    ],
+  },
+  {
+    category: "AI / SaaS",
+    title: "Store Readiness Audit",
+    description:
+      "Shopify product audit tool that extracts product data, scores listing quality with deterministic heuristics, and generates grounded AI rewrite suggestions. Includes Supabase-backed lead capture for follow-up requests.",
+    tech: ["Next.js", "TypeScript", "Supabase", "Groq", "Shopify", "Tailwind"],
+    links: [
+      { label: "GitHub", href: "https://github.com/malisaqib/audit_tool" },
     ],
   },
   {
@@ -89,7 +101,22 @@ export const projects: Project[] = [
     description:
       "Emergency-response coordination platform with FastAPI, PostgreSQL, RAG-based decision support, ChromaDB retrieval, and geospatial dashboards.",
     tech: ["Python", "FastAPI", "PostgreSQL", "ChromaDB", "Groq", "Streamlit"],
-    links: [{ label: "GitHub", href: "https://github.com/malisaqib" }],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/malisaqib/AI-disaster-management",
+      },
+    ],
+  },
+  {
+    category: "Security / Web App",
+    title: "Cipher Stack",
+    description:
+      "Interactive cipher pipeline builder for chaining text transformations, running encrypt/decrypt flows, and previewing each step. Supports ciphers like Caesar, XOR, Vigenere, Rail Fence, Columnar, Base64, and Reverse.",
+    tech: ["React", "Vite", "JavaScript", "Motion", "Drag and Drop", "Ciphers"],
+    links: [
+      { label: "GitHub", href: "https://github.com/malisaqib/cipher_stack" },
+    ],
   },
   {
     category: "Client Work",
