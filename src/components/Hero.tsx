@@ -1,8 +1,28 @@
+"use client";
+
+import type { MouseEvent } from "react";
 import { heroActions, profile } from "@/lib/data";
 import { Container } from "@/components/Container";
 
 function isExternalLink(href: string) {
   return href.startsWith("http");
+}
+
+function scrollWithoutHash(
+  event: MouseEvent<HTMLAnchorElement>,
+  href: string
+) {
+  if (!href.startsWith("#")) {
+    return;
+  }
+
+  event.preventDefault();
+  document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+  window.history.replaceState(
+    null,
+    "",
+    `${window.location.pathname}${window.location.search}`
+  );
 }
 
 export function Hero() {
@@ -37,6 +57,7 @@ export function Hero() {
                   <a
                     key={action.href}
                     href={action.href}
+                    onClick={(event) => scrollWithoutHash(event, action.href)}
                     target={isExternalLink(action.href) ? "_blank" : undefined}
                     rel={
                       isExternalLink(action.href)
