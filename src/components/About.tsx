@@ -1,27 +1,29 @@
+import { Container } from "@/components/Container";
+import { SectionHeader } from "@/components/SectionHeader";
+
 export function About() {
   return (
-    <section id="about" className="scroll-mt-24 px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-      <div className="mx-auto max-w-6xl">
-        <div className="max-w-3xl">
-          <p className="text-sm font-medium text-emerald-300">About</p>
-          <h2 className="mt-3 break-words text-3xl font-semibold leading-tight text-white sm:text-4xl">
-            I like building the systems that make products useful.
-          </h2>
-          <div className="mt-6 space-y-5 text-base leading-8 text-zinc-400">
-            <p>
-              I am a CS student at NUST focused on backend development and AI
-              engineering. My recent work has been around APIs, databases, RAG
-              pipelines, nutrition data, and LLM-powered workflows that need
-              reliable structure around them.
-            </p>
-            <p>
-              I am still early in my degree, so I care about practical projects
-              and real constraints: authentication, data quality, retrieval
-              accuracy, secure access, and deployable product behavior.
-            </p>
-          </div>
+    <section id="about" className="scroll-mt-24 py-14 sm:py-16 lg:py-20">
+      <Container>
+        <SectionHeader
+          eyebrow="About"
+          title="I like building things that work behind the scenes."
+        />
+        <div className="mt-6 max-w-3xl space-y-5 text-base leading-8 text-zinc-400 sm:text-lg">
+          <p>
+            I&apos;m a CS undergraduate at NUST who enjoys building APIs,
+            databases, retrieval pipelines, and AI workflows. Recently, I built
+            Zorfit, an AI fitness coaching PWA with RAG-based food parsing,
+            nutrition grounding, Supabase/PostgreSQL, pgvector, and LLM APIs.
+          </p>
+          <p>
+            Right now, I&apos;m looking for backend or AI engineering internship
+            opportunities where I can learn from real systems, contribute
+            seriously, and keep improving by working on production-level
+            problems.
+          </p>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

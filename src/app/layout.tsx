@@ -13,8 +13,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteTitle = "Muhammad Ali Saqib \u2014 Backend & AI Systems";
+
 export const metadata: Metadata = {
-  title: "Muhammad Ali Saqib — Backend & AI Systems",
+  title: siteTitle,
   description: siteDescription,
   authors: [{ name: profile.name }],
   creator: profile.name,
@@ -28,14 +30,14 @@ export const metadata: Metadata = {
     "Supabase",
   ],
   openGraph: {
-    title: "Muhammad Ali Saqib — Backend & AI Systems",
+    title: siteTitle,
     description: siteDescription,
     type: "website",
-    siteName: "Muhammad Ali Saqib",
+    siteName: profile.name,
   },
   twitter: {
     card: "summary",
-    title: "Muhammad Ali Saqib — Backend & AI Systems",
+    title: siteTitle,
     description: siteDescription,
   },
 };

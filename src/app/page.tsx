@@ -9,7 +9,7 @@ import { StackSection } from "@/components/StackSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_50%_-20%,rgba(52,211,153,0.12),transparent_34%),linear-gradient(180deg,#050505_0%,#08100d_42%,#050505_100%)]">
+    <div className="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_50%_-12%,rgba(52,211,153,0.10),transparent_30%),#050505]">
       <Navbar />
       <main>
         <Hero />
