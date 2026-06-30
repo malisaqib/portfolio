@@ -92,6 +92,7 @@ export const projects: Project[] = [
       "Shopify product audit tool that extracts product data, scores listing quality with deterministic heuristics, and generates grounded AI rewrite suggestions. Includes Supabase-backed lead capture for follow-up requests.",
     tech: ["Next.js", "TypeScript", "Supabase", "Groq", "Shopify", "Tailwind"],
     links: [
+      { label: "Live", href: "https://store-readiness-audit.vercel.app" },
       { label: "GitHub", href: "https://github.com/malisaqib/audit_tool" },
     ],
   },
@@ -115,6 +116,7 @@ export const projects: Project[] = [
       "Interactive cipher pipeline builder for chaining text transformations, running encrypt/decrypt flows, and previewing each step. Supports ciphers like Caesar, XOR, Vigenere, Rail Fence, Columnar, Base64, and Reverse.",
     tech: ["React", "Vite", "JavaScript", "Motion", "Drag and Drop", "Ciphers"],
     links: [
+      { label: "Live", href: "https://cipher-stack-two.vercel.app" },
       { label: "GitHub", href: "https://github.com/malisaqib/cipher_stack" },
     ],
   },
@@ -125,6 +127,7 @@ export const projects: Project[] = [
       "Responsive business website for a real client with product pages, optimized routing, and an AI chatbot for customer and product queries.",
     tech: ["Next.js", "React", "AI Chatbot"],
     links: [
+      { label: "Live", href: "https://samko-lubricants.vercel.app" },
       {
         label: "GitHub",
         href: "https://github.com/malisaqib/samko-lubricants",
