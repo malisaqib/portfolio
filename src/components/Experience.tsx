@@ -15,7 +15,7 @@ export function Experience() {
           {timelineItems.map((item) => (
             <article
               key={item.title}
-              className="grid gap-4 border-t border-line py-8 lg:grid-cols-[0.35fr_0.2fr_0.45fr]"
+              className="row-hover divider-reveal grid gap-4 py-8 lg:grid-cols-[0.35fr_0.2fr_0.45fr]"
             >
               <div>
                 <h3 className="font-display text-4xl font-semibold leading-none text-foreground">

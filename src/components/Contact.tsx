@@ -15,7 +15,7 @@ export function Contact() {
               href={link.href}
               target={link.href.startsWith("http") ? "_blank" : undefined}
               rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="grid gap-3 border-t border-line py-6 transition-colors hover:text-muted sm:grid-cols-[0.25fr_1fr_auto] sm:items-center"
+              className="row-hover divider-reveal grid gap-3 py-6 transition-colors hover:text-muted sm:grid-cols-[0.25fr_1fr_auto] sm:items-center"
             >
               <span className="font-mono text-xs font-medium uppercase tracking-[0.22em] text-muted">
                 {link.label}

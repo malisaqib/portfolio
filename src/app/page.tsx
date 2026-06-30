@@ -9,7 +9,7 @@ import { StackSection } from "@/components/StackSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-background">
+    <div className="page-shell min-h-screen overflow-x-hidden bg-background">
       <Navbar />
       <main>
         <Hero />

@@ -6,7 +6,7 @@ function isExternalLink(href: string) {
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="grid gap-8 border-t border-line py-9 lg:grid-cols-[0.72fr_0.28fr] lg:py-11">
+    <article className="row-hover divider-reveal grid gap-8 py-9 lg:grid-cols-[0.72fr_0.28fr] lg:py-11">
       <div className="max-w-4xl">
         <p className="font-mono text-xs font-medium uppercase tracking-[0.22em] text-muted">
           {project.category}
@@ -29,7 +29,7 @@ export function ProjectCard({ project }: { project: Project }) {
             href={link.href}
             target={isExternalLink(link.href) ? "_blank" : undefined}
             rel={isExternalLink(link.href) ? "noopener noreferrer" : undefined}
-            className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-foreground transition-colors hover:text-muted"
+            className="editorial-link font-mono text-xs font-medium uppercase tracking-[0.2em] text-foreground"
           >
             {link.label}
           </a>

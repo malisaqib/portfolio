@@ -7,11 +7,11 @@ function isExternalLink(href: string) {
 
 export function Hero() {
   return (
-    <section id="top" className="py-16 sm:py-20 lg:py-24">
+    <section id="top" className="pt-14 pb-8 sm:py-20 lg:py-24">
       <Container>
-        <div className="min-h-[640px] border-b border-line pb-14 sm:min-h-[680px] sm:pb-16 lg:min-h-[640px]">
+        <div className="divider-reveal border-b border-line pb-10 sm:min-h-[660px] sm:pb-16 lg:min-h-[620px]">
           <div className="grid gap-12 lg:grid-cols-[0.78fr_0.22fr]">
-            <div>
+            <div className="reveal">
               <div>
                 <p className="font-display text-2xl font-semibold text-foreground">
                   {profile.name}
@@ -27,7 +27,7 @@ export function Hero() {
               </h1>
             </div>
 
-            <div className="flex flex-col justify-end lg:pb-5">
+            <div className="reveal reveal-delay-2 flex flex-col justify-end lg:pb-5">
               <p className="max-w-[350px] break-words text-base leading-7 text-muted sm:max-w-md sm:text-lg">
                 CS undergraduate at NUST building backend-heavy AI products,
                 retrieval pipelines, APIs, and database-backed software.
@@ -43,7 +43,7 @@ export function Hero() {
                         ? "noopener noreferrer"
                         : undefined
                     }
-                    className="border-b border-foreground pb-1 font-mono text-xs font-medium uppercase tracking-[0.2em] text-foreground transition-colors hover:text-muted"
+                    className="editorial-link font-mono text-xs font-medium uppercase tracking-[0.2em] text-foreground"
                   >
                     {action.label}
                   </a>
@@ -52,8 +52,9 @@ export function Hero() {
             </div>
           </div>
 
-          <p className="mt-14 max-w-[350px] break-words font-mono text-xs uppercase tracking-[0.18em] text-muted sm:mt-20 sm:max-w-3xl sm:tracking-[0.24em]">
+          <p className="reveal reveal-delay-3 mt-14 max-w-[350px] break-words font-mono text-xs uppercase tracking-[0.18em] text-muted sm:mt-20 sm:max-w-3xl sm:tracking-[0.24em]">
             Backend builder | AI systems | RAG pipelines | APIs
+            <span className="cursor-mark" aria-hidden="true" />
           </p>
         </div>
       </Container>

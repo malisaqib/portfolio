@@ -7,7 +7,7 @@ export function About() {
       <Container>
         <SectionHeader eyebrow="About" title="Overview" />
 
-        <div className="mt-8 grid gap-8 border-t border-line pt-8 lg:grid-cols-[0.35fr_0.65fr]">
+        <div className="divider-reveal mt-8 grid gap-8 pt-8 lg:grid-cols-[0.35fr_0.65fr]">
           <p className="font-mono text-xs font-medium uppercase leading-6 tracking-[0.2em] text-muted">
             Backend systems, retrieval, databases, and production workflows.
           </p>

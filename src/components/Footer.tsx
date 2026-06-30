@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="pb-8 pt-6">
       <Container>
-        <div className="border-t border-line pt-6">
+        <div className="divider-reveal pt-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div>
               <p className="font-display text-4xl font-semibold leading-none text-foreground">
@@ -16,7 +16,7 @@ export function Footer() {
               </p>
             </div>
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted">
-              © {profile.name}. All rights reserved.
+              &copy; {profile.name}. All rights reserved.
             </p>
           </div>
         </div>

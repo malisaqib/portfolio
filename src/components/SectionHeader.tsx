@@ -12,7 +12,7 @@ export function SectionHeader({
   className = "",
 }: SectionHeaderProps) {
   return (
-    <div className={`border-t border-line pt-7 ${className}`}>
+    <div className={`divider-reveal pt-7 ${className}`}>
       <p className="font-mono text-xs font-medium uppercase tracking-[0.22em] text-muted">
         {eyebrow}
       </p>

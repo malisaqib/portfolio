@@ -37,3 +37,151 @@ body {
   background: #171717;
   color: #f4f0e8;
 }
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes line-in {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes blink {
+  0%,
+  48% {
+    opacity: 1;
+  }
+  49%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.page-shell {
+  animation: page-in 650ms ease both;
+}
+
+.reveal {
+  animation: rise-in 800ms cubic-bezier(0.2, 0.75, 0.2, 1) both;
+}
+
+.reveal-delay-1 {
+  animation-delay: 90ms;
+}
+
+.reveal-delay-2 {
+  animation-delay: 180ms;
+}
+
+.reveal-delay-3 {
+  animation-delay: 270ms;
+}
+
+.divider-reveal {
+  position: relative;
+}
+
+.divider-reveal::before {
+  background: var(--line);
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: left;
+}
+
+.page-shell .divider-reveal::before {
+  animation: line-in 900ms cubic-bezier(0.2, 0.75, 0.2, 1) both;
+}
+
+.editorial-link {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  padding-bottom: 0.2rem;
+  transition:
+    background-size 220ms ease,
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+.editorial-link:hover {
+  background-size: 55% 1px;
+  color: var(--muted);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  background: currentColor;
+  bottom: -0.35rem;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+  width: 100%;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.cursor-mark {
+  animation: blink 950ms steps(1, end) infinite;
+  background: currentColor;
+  display: inline-block;
+  height: 1em;
+  margin-left: 0.6rem;
+  vertical-align: -0.12em;
+  width: 1px;
+}
+
+.row-hover {
+  transition:
+    color 220ms ease,
+    transform 280ms cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+
+.row-hover:hover {
+  transform: translateX(6px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}

@@ -10,7 +10,7 @@ export function StackSection() {
 
         <div className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2">
           {skillGroups.map((group) => (
-            <article key={group.title} className="border-t border-line pt-5">
+            <article key={group.title} className="divider-reveal pt-5">
               <h3 className="font-mono text-xs font-medium uppercase tracking-[0.22em] text-foreground">
                 {group.title}
               </h3>

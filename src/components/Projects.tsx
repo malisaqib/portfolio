@@ -5,11 +5,11 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 export function Projects() {
   return (
-    <section id="work" className="scroll-mt-24 py-14 sm:py-18 lg:py-20">
+    <section id="work" className="scroll-mt-24 pt-8 pb-14 sm:py-18 lg:py-20">
       <Container>
         <SectionHeader eyebrow="Work" title="Projects" />
 
-        <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2 border-t border-line pt-5">
+        <div className="divider-reveal mt-8 flex flex-wrap gap-x-5 gap-y-2 pt-5">
           {projectFilters.map((filter) => (
             <span
               key={filter}

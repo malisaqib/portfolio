@@ -28,7 +28,7 @@ export function Navbar() {
                 href={item.href}
                 target={isExternalLink(item.href) ? "_blank" : undefined}
                 rel={isExternalLink(item.href) ? "noopener noreferrer" : undefined}
-                className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-muted transition-colors hover:text-foreground"
+                className="nav-link font-mono text-xs font-medium uppercase tracking-[0.18em] text-muted transition-colors hover:text-foreground"
               >
                 {item.label}
               </a>
