@@ -3,11 +3,22 @@ import { Container } from "@/components/Container";
 
 export function Footer() {
   return (
-    <footer className="pb-10">
-      <Container className="border-t border-white/10 pt-8">
-        <div className="flex flex-col gap-3 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>2026 {profile.name}</p>
-          <p>Backend, AI systems, APIs, databases, and RAG pipelines.</p>
+    <footer className="pb-8 pt-6">
+      <Container>
+        <div className="border-t border-line pt-6">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <p className="font-display text-4xl font-semibold leading-none text-foreground">
+                {profile.shortName}
+              </p>
+              <p className="mt-2 text-sm text-muted">
+                Backend & AI systems builder at NUST.
+              </p>
+            </div>
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted">
+              © {profile.name}. All rights reserved.
+            </p>
+          </div>
         </div>
       </Container>
     </footer>

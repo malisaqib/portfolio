@@ -4,12 +4,10 @@ export type LinkItem = {
 };
 
 export type Project = {
+  category: string;
   title: string;
-  subtitle: string;
-  categories: string[];
-  stack: string[];
   description: string;
-  highlights: string[];
+  tech: string[];
   links: LinkItem[];
 };
 
@@ -18,22 +16,25 @@ export type SkillGroup = {
   skills: string[];
 };
 
-export type Education = {
-  school: string;
-  degree: string;
+export type TimelineItem = {
+  title: string;
+  meta: string;
   dates: string;
-  bullets: string[];
+  description: string;
+};
+
+export type SocialLink = {
+  label: string;
+  value: string;
+  href: string;
 };
 
 export const profile = {
   name: "Muhammad Ali Saqib",
+  shortName: "Ali.",
   tagline: "Backend & AI Systems",
   location: "CS undergraduate at NUST",
   email: "muhammadalisaqib2006@gmail.com",
-  heroIntro:
-    "I'm Muhammad Ali Saqib, a CS student building backend-heavy AI products, RAG pipelines, APIs, and database-backed software.",
-  heroDetail:
-    "I like working close to the systems layer: retrieval, data modeling, auth, structured LLM output, and real product workflows.",
   github: "https://github.com/malisaqib",
   linkedin: "https://www.linkedin.com/in/m-ali-saqib",
 };
@@ -43,44 +44,39 @@ export const navItems: LinkItem[] = [
   { label: "Stack", href: "#stack" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
+  { label: "GitHub", href: profile.github },
 ];
 
 export const heroActions: LinkItem[] = [
-  { label: "View Projects", href: "#work" },
+  { label: "View Work", href: "#work" },
   { label: "GitHub", href: profile.github },
   { label: "LinkedIn", href: profile.linkedin },
-  { label: "Email Me", href: `mailto:${profile.email}` },
+  { label: "Email", href: `mailto:${profile.email}` },
 ];
 
-export const focusAreas = [
-  "Backend APIs",
-  "RAG and vector search",
-  "PostgreSQL systems",
-  "Production AI workflows",
+export const projectFilters = [
+  "All",
+  "AI",
+  "Backend",
+  "RAG",
+  "Web App",
+  "Client Work",
 ];
 
 export const projects: Project[] = [
   {
+    category: "AI Product",
     title: "Zorfit",
-    subtitle: "AI Fitness Coaching Platform",
-    categories: ["AI Product", "Backend", "RAG"],
-    stack: [
-      "Next.js 15",
-      "TypeScript",
+    description:
+      "AI fitness coaching PWA for personalized diet plans, workout plans, natural-language meal logging, and calorie/protein tracking. Built around South Asian foods, Roman Urdu input, and grounded nutrition data.",
+    tech: [
+      "Next.js",
       "Supabase",
       "PostgreSQL",
+      "pgvector",
       "Groq",
       "Gemini",
-      "pgvector",
-    ],
-    description:
-      "A mobile-first AI fitness PWA for personalized diet plans, workout plans, natural-language meal logging, and calorie/protein tracking. The system is built around South Asian foods, desi portions, and Roman Urdu input.",
-    highlights: [
-      "Built hybrid retrieval with Gemini embeddings, pgvector, Postgres trigram search, and alias expansion.",
-      "Converted meal text like \"2 roti, daal\" into structured nutrition JSON using Groq/Llama.",
-      "Unified a 7,900-item food database with per-100g nutrition normalization.",
-      "Added deterministic grounding checks to reduce unsupported AI nutrition outputs.",
-      "Secured user data using Supabase Auth and Row Level Security.",
+      "RAG",
     ],
     links: [
       { label: "Live", href: "https://www.zorfit.app" },
@@ -88,47 +84,32 @@ export const projects: Project[] = [
     ],
   },
   {
+    category: "AI / Backend",
     title: "AI Disaster Management System",
-    subtitle: "Emergency-response coordination and decision support",
-    categories: ["AI", "Backend", "RAG"],
-    stack: [
-      "Python",
-      "FastAPI",
-      "PostgreSQL",
-      "ChromaDB",
-      "Groq",
-      "Streamlit",
-    ],
     description:
-      "A multi-role emergency-response platform for disaster resource coordination, situational context, and decision support.",
-    highlights: [
-      "Built a FastAPI backend with PostgreSQL schemas, migrations, ENUMs, triggers, stored procedures, and analytical views.",
-      "Implemented RAG using ChromaDB and Sentence Transformers.",
-      "Used Groq Llama for context-aware emergency support responses.",
-      "Added geospatial dashboards using Pandas and Folium.",
-    ],
+      "Emergency-response coordination platform with FastAPI, PostgreSQL, RAG-based decision support, ChromaDB retrieval, and geospatial dashboards.",
+    tech: ["Python", "FastAPI", "PostgreSQL", "ChromaDB", "Groq", "Streamlit"],
     links: [{ label: "GitHub", href: "https://github.com/malisaqib" }],
   },
   {
+    category: "Client Work",
     title: "Samko Lubricants",
-    subtitle: "Business Website + AI Chatbot",
-    categories: ["Client Work", "Web App", "AI Chatbot"],
-    stack: ["React", "Next.js"],
     description:
-      "A responsive production website for a real client, with an AI chatbot for customer and product queries.",
-    highlights: [
-      "Delivered a responsive production website for a real client.",
-      "Built component-based pages and optimized routing.",
-      "Added an AI chatbot for customer and product queries.",
+      "Responsive business website for a real client with product pages, optimized routing, and an AI chatbot for customer and product queries.",
+    tech: ["Next.js", "React", "AI Chatbot"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/malisaqib/samko-lubricants",
+      },
     ],
-    links: [{ label: "GitHub", href: "https://github.com/malisaqib" }],
   },
 ];
 
 export const skillGroups: SkillGroup[] = [
   {
     title: "Backend & APIs",
-    skills: ["FastAPI", "REST APIs", "server-side logic", "Node.js basics"],
+    skills: ["FastAPI", "REST APIs", "Server-side logic", "Node.js basics"],
   },
   {
     title: "AI / LLM Systems",
@@ -137,13 +118,13 @@ export const skillGroups: SkillGroup[] = [
       "LLM APIs",
       "Groq/Llama",
       "Gemini",
-      "embeddings",
-      "structured output",
-      "semantic search",
+      "Embeddings",
+      "Structured output",
+      "Semantic search",
     ],
   },
   {
-    title: "Databases",
+    title: "Data & Vectors",
     skills: [
       "PostgreSQL",
       "Supabase",
@@ -151,8 +132,8 @@ export const skillGroups: SkillGroup[] = [
       "ChromaDB",
       "SQL",
       "Row Level Security",
-      "migrations",
-      "triggers",
+      "Migrations",
+      "Triggers",
     ],
   },
   {
@@ -167,32 +148,45 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    title: "Tools",
+    title: "Tooling",
     skills: ["Git", "GitHub", "Vercel", "ESLint", "Node test runner", "Maven"],
   },
 ];
 
-export const experience = {
-  role: "Frontend Developer Intern",
-  company: "OctiLearn",
-  location: "Dubai, UAE",
-  dates: "June 2024 - August 2024",
-  bullets: [
-    "Built reusable React components and dynamic routing for an EdTech platform.",
-    "Integrated backend REST APIs.",
-    "Collaborated through Git/GitHub in a remote team.",
-  ],
-};
+export const timelineItems: TimelineItem[] = [
+  {
+    title: "Frontend Developer Intern",
+    meta: "OctiLearn, Dubai, UAE",
+    dates: "June 2024 - August 2024",
+    description:
+      "Built reusable React components, dynamic routing, integrated backend REST APIs, and collaborated remotely using Git/GitHub.",
+  },
+  {
+    title: "BS Computer Science",
+    meta: "National University of Sciences and Technology",
+    dates: "Sep 2025 - Expected 2029",
+    description:
+      "Coursework includes Database Systems, Object-Oriented Programming, Discrete Mathematics, Linear Algebra, and Calculus.",
+  },
+];
 
-export const education: Education = {
-  school: "National University of Sciences and Technology (NUST)",
-  degree: "BS Computer Science",
-  dates: "Sep 2025 - Expected 2029",
-  bullets: [
-    "Coursework: Database Systems, Object-Oriented Programming, Discrete Mathematics, Linear Algebra, Calculus.",
-    "Focused on backend systems, AI engineering, and production software projects.",
-  ],
-};
+export const socialLinks: SocialLink[] = [
+  {
+    label: "GitHub",
+    value: "malisaqib",
+    href: profile.github,
+  },
+  {
+    label: "LinkedIn",
+    value: "Muhammad Ali Saqib",
+    href: profile.linkedin,
+  },
+  {
+    label: "Email",
+    value: profile.email,
+    href: `mailto:${profile.email}`,
+  },
+];
 
 export const siteDescription =
   "CS student at NUST building backend-heavy AI products, RAG pipelines, APIs, and production software.";

@@ -1,27 +1,29 @@
-import { projects } from "@/lib/data";
+import { projectFilters, projects } from "@/lib/data";
 import { Container } from "@/components/Container";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeader } from "@/components/SectionHeader";
 
 export function Projects() {
-  const [featuredProject, ...otherProjects] = projects;
-
   return (
-    <section id="work" className="scroll-mt-24 py-14 sm:py-16 lg:py-20">
+    <section id="work" className="scroll-mt-24 py-14 sm:py-18 lg:py-20">
       <Container>
-        <SectionHeader
-          eyebrow="Work"
-          title="Selected backend and AI projects."
-          subtitle="Projects where I worked on APIs, data pipelines, LLM integrations, databases, and production deployment."
-        />
+        <SectionHeader eyebrow="Work" title="Projects" />
 
-        <div className="mt-10 space-y-5">
-          <ProjectCard project={featuredProject} featured />
-          <div className="grid gap-5 lg:grid-cols-2">
-            {otherProjects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
-            ))}
-          </div>
+        <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2 border-t border-line pt-5">
+          {projectFilters.map((filter) => (
+            <span
+              key={filter}
+              className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-muted"
+            >
+              {filter}
+            </span>
+          ))}
+        </div>
+
+        <div className="mt-8">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
         </div>
       </Container>
     </section>

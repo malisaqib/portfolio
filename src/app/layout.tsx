@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import { profile, siteDescription } from "@/lib/data";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const display = Cormorant_Garamond({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["500", "600"],
+});
+
+const sans = Inter({
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const mono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 const siteTitle = "Muhammad Ali Saqib \u2014 Backend & AI Systems";
@@ -20,15 +27,6 @@ export const metadata: Metadata = {
   description: siteDescription,
   authors: [{ name: profile.name }],
   creator: profile.name,
-  keywords: [
-    "Muhammad Ali Saqib",
-    "Backend Development",
-    "AI Engineering",
-    "RAG pipelines",
-    "FastAPI",
-    "PostgreSQL",
-    "Supabase",
-  ],
   openGraph: {
     title: siteTitle,
     description: siteDescription,
@@ -50,11 +48,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${display.variable} ${sans.variable} ${mono.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-background text-foreground">
-        {children}
-      </body>
+      <body className="min-h-full bg-background text-foreground">{children}</body>
     </html>
   );
 }

@@ -1,4 +1,4 @@
-import { focusAreas, heroActions, profile } from "@/lib/data";
+import { heroActions, profile } from "@/lib/data";
 import { Container } from "@/components/Container";
 
 function isExternalLink(href: string) {
@@ -7,63 +7,54 @@ function isExternalLink(href: string) {
 
 export function Hero() {
   return (
-    <section id="top" className="py-12 sm:py-14 lg:py-16">
+    <section id="top" className="py-16 sm:py-20 lg:py-24">
       <Container>
-        <div className="grid min-w-0 gap-10 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-center">
-          <div className="min-w-0">
-            <p className="mb-5 text-sm font-medium text-emerald-300">
-              {profile.location}
-            </p>
-            <h1 className="max-w-[11ch] break-words text-4xl font-semibold leading-tight text-white sm:max-w-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl">
-              {profile.tagline}
-            </h1>
-            <div className="mt-6 max-w-3xl space-y-4 break-words text-base leading-8 text-zinc-400 sm:text-lg">
-              <p>{profile.heroIntro}</p>
-              <p>{profile.heroDetail}</p>
+        <div className="min-h-[640px] border-b border-line pb-14 sm:min-h-[680px] sm:pb-16 lg:min-h-[640px]">
+          <div className="grid gap-12 lg:grid-cols-[0.78fr_0.22fr]">
+            <div>
+              <div>
+                <p className="font-display text-2xl font-semibold text-foreground">
+                  {profile.name}
+                </p>
+                <p className="mt-1 font-mono text-xs font-medium uppercase tracking-[0.28em] text-muted">
+                  Portfolio
+                </p>
+              </div>
+
+              <h1 className="mt-14 max-w-[350px] break-words font-display text-[4.35rem] font-semibold leading-[0.88] text-foreground sm:mt-16 sm:max-w-5xl sm:text-[7rem] sm:leading-[0.83] lg:text-[9.5rem]">
+                Backend-minded
+                <span className="block text-muted">AI systems</span>
+              </h1>
             </div>
 
-            <div className="mt-9 flex flex-wrap gap-3">
-              {heroActions.map((action, index) => (
-                <a
-                  key={action.href}
-                  href={action.href}
-                  target={isExternalLink(action.href) ? "_blank" : undefined}
-                  rel={
-                    isExternalLink(action.href)
-                      ? "noopener noreferrer"
-                      : undefined
-                  }
-                  className={
-                    index === 0
-                      ? "rounded-xl bg-emerald-300 px-5 py-3 text-sm font-semibold text-zinc-950 transition-colors hover:bg-emerald-200"
-                      : "rounded-xl border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-zinc-200 transition-colors hover:border-emerald-300/40 hover:bg-white/[0.06] hover:text-white"
-                  }
-                >
-                  {action.label}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div className="min-w-0 rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-2xl shadow-black/20">
-            <p className="text-sm font-medium text-zinc-300">Systems focus</p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {focusAreas.map((area) => (
-                <span
-                  key={area}
-                  className="max-w-full break-words rounded-xl border border-white/10 bg-black/25 px-3 py-2 text-sm text-zinc-300"
-                >
-                  {area}
-                </span>
-              ))}
-            </div>
-            <div className="mt-6 border-t border-white/10 pt-5">
-              <p className="text-sm leading-6 text-zinc-400">
-                Building toward internship-ready backend and AI engineering
-                work through practical shipped projects.
+            <div className="flex flex-col justify-end lg:pb-5">
+              <p className="max-w-[350px] break-words text-base leading-7 text-muted sm:max-w-md sm:text-lg">
+                CS undergraduate at NUST building backend-heavy AI products,
+                retrieval pipelines, APIs, and database-backed software.
               </p>
+              <div className="mt-7 flex max-w-[350px] flex-wrap gap-x-6 gap-y-3 sm:max-w-md">
+                {heroActions.map((action) => (
+                  <a
+                    key={action.href}
+                    href={action.href}
+                    target={isExternalLink(action.href) ? "_blank" : undefined}
+                    rel={
+                      isExternalLink(action.href)
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                    className="border-b border-foreground pb-1 font-mono text-xs font-medium uppercase tracking-[0.2em] text-foreground transition-colors hover:text-muted"
+                  >
+                    {action.label}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
+
+          <p className="mt-14 max-w-[350px] break-words font-mono text-xs uppercase tracking-[0.18em] text-muted sm:mt-20 sm:max-w-3xl sm:tracking-[0.24em]">
+            Backend builder | AI systems | RAG pipelines | APIs
+          </p>
         </div>
       </Container>
     </section>
